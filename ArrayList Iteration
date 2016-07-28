@@ -1,0 +1,63 @@
+package Session8;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class ArrayListIteration {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub\
+		
+		
+		
+		ArrayList<String> val1= new ArrayList<String>();
+		
+		val1.add("John");
+		val1.add("Will");
+		val1.add(2, "Tony");
+		val1.add(3,"Ralph");
+		val1.add(4,"Bob");
+		
+		try{
+		
+		/*Scanner read = new Scanner(System.in);
+		
+		System.out.print("Enter the Index Number to retrieve the value: ");
+		
+		int ind = read.nextInt();
+		
+		System.out.println("Name at index " + ind + " is :" + val1.get(ind)); */
+		
+	         ListIterator<String> itr = val1.listIterator();
+		
+		System.out.println("All the elements in the Array List");
+		
+		while(itr.hasNext()){
+			
+			System.out.println("Index of "+ itr.nextIndex() +" : " +itr.next());
+			
+		}
+		
+		
+		}catch(IndexOutOfBoundsException e){
+			System.out.println("Entered index value is not valid!");
+		}
+
+	}
+
+}
+
+
+/* Output
+
+All the elements in the Array List
+Index of 0 : John
+Index of 1 : Will
+Index of 2 : Tony
+Index of 3 : Ralph
+Index of 4 : Bob
+
+
+*/
